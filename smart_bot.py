@@ -79,6 +79,6 @@ async def main():
     # Убираем 'allowed_updates', так как types.ALL_TYPES не существует в aiogram 3
     await dp.start_polling(bot)
 
-
+# Основная функция
 if __name__ == "__main__":
     asyncio.run(main())

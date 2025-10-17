@@ -1,3 +1,4 @@
+# Этот проект живёт на GitHub
 import asyncio
 import logging
 import random

@@ -1,26 +1,127 @@
 import asyncio
-from aiogram import types
-from src.config import RESPONSE_DELAY, MAX_HISTORY_MESSAGES
-from src.responses import get_emoji_response
-from src.emoji_utils import is_only_emoji
-from src.api_client import get_voidai_response
-from src.logging_config import logger
-from src.chat_state_manager import active_chats
+import os
+from aiogram import types, Bot
+from aiogram.filters import CommandObject
+from config import RESPONSE_DELAY, MAX_HISTORY_MESSAGES
+from responses import get_emoji_response
+from emoji_utils import is_only_emoji
+from api_client import get_voidai_response
+from logging_config import logger
+from chat_state_manager import active_chats
 
-# Global variable to store the bot instance - will be set from main module
-_bot_instance = None
+# --- Helper to read prompt files ---
+def read_prompt_file(filename):
+    try:
+        with open(os.path.join("prompting", filename), "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except Exception as e:
+        logger.error(f"Error reading prompt file {filename}: {e}")
+        return ""
 
-def set_bot_instance(bot_instance):
-    global _bot_instance
-    _bot_instance = bot_instance
-
-def get_bot_instance():
-    return _bot_instance
+# --- Helper to check admin status ---
+async def is_admin(message: types.Message):
+    chat_member = await message.bot.get_chat_member(message.chat.id, message.from_user.id)
+    return chat_member.status in ["administrator", "creator"]
 
 # --- /start command handler ---
 async def cmd_start(message: types.Message):
     logger.info(f"Received /start command from user {message.from_user.id} in chat {message.chat.id}")
     await message.answer("👋 Hi! I'm a smart bot. Write me something and I'll reply! What shall we talk about?")
+
+
+# --- /role command handler ---
+async def cmd_role(message: types.Message, command: CommandObject):
+    if not await is_admin(message):
+        await message.answer("🚫 Only admins can change the role.")
+        return
+
+    chat_id = message.chat.id
+    custom_role = command.args
+    
+    if chat_id not in active_chats:
+         active_chats[chat_id] = {
+            "message_history": [],
+            "timer": None,
+            "is_waiting_for_user": False,
+            "reply_to_message_id": None,
+            "custom_role": "",
+            "custom_goal": ""
+        }
+
+    if not custom_role:
+        # Reset role
+        active_chats[chat_id]["custom_role"] = ""
+        await message.answer("🔄 Custom role reset.")
+        logger.info(f"Custom role reset for chat {chat_id}")
+    else:
+        active_chats[chat_id]["custom_role"] = custom_role
+        await message.answer(f"🎭 Custom role set to: {custom_role}")
+        logger.info(f"Custom role set for chat {chat_id}: {custom_role}")
+
+
+# --- /goal command handler ---
+async def cmd_goal(message: types.Message, command: CommandObject):
+    if not await is_admin(message):
+        await message.answer("🚫 Only admins can change the goal.")
+        return
+
+    chat_id = message.chat.id
+    custom_goal = command.args
+
+    if chat_id not in active_chats:
+         active_chats[chat_id] = {
+            "message_history": [],
+            "timer": None,
+            "is_waiting_for_user": False,
+            "reply_to_message_id": None,
+            "custom_role": "",
+            "custom_goal": ""
+        }
+
+    if not custom_goal:
+        # Reset goal
+        active_chats[chat_id]["custom_goal"] = ""
+        await message.answer("🔄 Custom goal reset.")
+        logger.info(f"Custom goal reset for chat {chat_id}")
+    else:
+        active_chats[chat_id]["custom_goal"] = custom_goal
+        await message.answer(f"🎯 Custom goal set to: {custom_goal}")
+        logger.info(f"Custom goal set for chat {chat_id}: {custom_goal}")
+
+
+# --- /statusconv command handler ---
+async def cmd_statusconv(message: types.Message):
+    if not await is_admin(message):
+        await message.answer("🚫 Only admins can view the status.")
+        return
+
+    chat_id = message.chat.id
+    
+    # Get base prompts
+    base_role = read_prompt_file("role_prompt.md")
+    base_goal = read_prompt_file("goal_prompt.md")
+    
+    # Get custom prompts
+    custom_role = ""
+    custom_goal = ""
+    
+    if chat_id in active_chats:
+        custom_role = active_chats[chat_id].get("custom_role", "")
+        custom_goal = active_chats[chat_id].get("custom_goal", "")
+    
+    # Construct status message
+    status_msg = (
+        f"📋 **Current Conversation Status**\n\n"
+        f"**# Role**\n"
+        f"{base_role}\n"
+        f"{custom_role}\n\n"
+        f"**# Goal**\n"
+        f"{base_goal}\n"
+        f"{custom_goal}"
+    )
+    
+    await message.answer(status_msg, parse_mode="Markdown")
+    logger.info(f"Sent statusconv response to chat {chat_id}")
 
 
 # --- /startconv command ---
@@ -29,6 +130,10 @@ async def start_conversation(message: types.Message):
     logger.info(f"Received /startconv command from user {message.from_user.id} in chat {chat_id}")
 
     if chat_id in active_chats:
+        # Just ensure fields exist if they were missing (backward compatibility)
+        if "custom_role" not in active_chats[chat_id]: active_chats[chat_id]["custom_role"] = ""
+        if "custom_goal" not in active_chats[chat_id]: active_chats[chat_id]["custom_goal"] = ""
+        
         await message.answer("🤖 Conversation mode is already activated in this chat.")
         logger.info(f"Conversation mode is already active in chat {chat_id}")
         return
@@ -37,7 +142,9 @@ async def start_conversation(message: types.Message):
         "message_history": [],
         "timer": None,
         "is_waiting_for_user": False,
-        "reply_to_message_id": None  # Add field to store message ID to reply to
+        "reply_to_message_id": None,
+        "custom_role": "",
+        "custom_goal": ""
     }
     logger.debug(f"Chat state {chat_id} initialized: {active_chats[chat_id]}")
     await message.answer("🤖 Conversation mode activated. I will join the conversation if there is a pause.")
@@ -66,7 +173,7 @@ async def stop_conversation(message: types.Message):
 
 
 # --- Function to generate and send response ---
-async def generate_response(chat_id: int):
+async def generate_response(chat_id: int, bot: Bot):
     logger.info(f"Response generation started for chat {chat_id}")
     state = active_chats.get(chat_id)
     logger.debug(f"Chat state {chat_id} before response generation: {state}")
@@ -80,16 +187,22 @@ async def generate_response(chat_id: int):
         return
 
     try:
-        bot = get_bot_instance()
-        if not bot:
-            logger.error(f"Bot instance not available in generate_response for chat {chat_id}")
-            return
-            
         await bot.send_chat_action(chat_id, "typing")
         logger.debug(f"Sent 'typing' indicator to chat {chat_id}")
 
-        logger.debug(f"Message history for VoidAI API in chat {chat_id}: {state['message_history']}")
-        generated_text = await get_voidai_response(state["message_history"])
+        # --- Construct Structured Prompt ---
+        base_role = read_prompt_file("role_prompt.md")
+        base_goal = read_prompt_file("goal_prompt.md")
+        custom_role = state.get("custom_role", "")
+        custom_goal = state.get("custom_goal", "")
+
+        system_prompt = f"# Role\n{base_role}\n{custom_role}\n\n# Goal\n{base_goal}\n{custom_goal}"
+        
+        # Create a copy of history and prepend system prompt
+        full_history = [{"role": "system", "content": system_prompt}] + state["message_history"]
+
+        logger.debug(f"Sending structured prompt to VoidAI for chat {chat_id}. System Prompt length: {len(system_prompt)}")
+        generated_text = await get_voidai_response(full_history)
         logger.info(f"Received response from Gemini for chat {chat_id}: {generated_text}")
 
         await bot.send_message(chat_id, generated_text, reply_to_message_id=state.get("reply_to_message_id"))
@@ -117,11 +230,7 @@ async def generate_response(chat_id: int):
 
 # --- Handler for any messages ---
 async def handle_message(message: types.Message):
-    bot = get_bot_instance()
-    if not bot:
-        logger.error(f"Bot instance not available in handle_message for chat {message.chat.id}")
-        return
-    
+    bot = message.bot
     chat_id = message.chat.id
     user_id = message.from_user.id
     user_text = message.text
@@ -133,6 +242,10 @@ async def handle_message(message: types.Message):
         return
 
     state = active_chats[chat_id]
+    # Ensure backward compatibility if state was created before update (though unlikely in memory)
+    if "custom_role" not in state: state["custom_role"] = ""
+    if "custom_goal" not in state: state["custom_goal"] = ""
+
     logger.debug(f"Current chat state {chat_id}: {state}")
 
     # Store the message ID to reply to only if the user is replying to the bot
@@ -177,9 +290,9 @@ async def handle_message(message: types.Message):
         logger.debug(f"Previous timer cancelled for chat {chat_id}")
 
     # Create a proper async task for the timer to handle cancellation correctly
-    async def delayed_response(chat_id):
+    async def delayed_response(chat_id, bot_instance):
         await asyncio.sleep(RESPONSE_DELAY)
-        await generate_response(chat_id)
+        await generate_response(chat_id, bot_instance)
 
-    state["timer"] = asyncio.create_task(delayed_response(chat_id))
+    state["timer"] = asyncio.create_task(delayed_response(chat_id, bot))
     logger.info(f"New timer task created for {RESPONSE_DELAY} seconds for chat {chat_id}")

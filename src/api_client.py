@@ -1,7 +1,7 @@
 import httpx
 import asyncio
-from src.config import VOIDAI_API_KEY
-from src.logging_config import logger
+from config import VOIDAI_API_KEY, VOIDAI_MODEL
+from logging_config import logger
 
 # --- Function to get response from VoidAI ---
 async def get_voidai_response(message_history: list) -> str:
@@ -11,10 +11,11 @@ async def get_voidai_response(message_history: list) -> str:
         "Content-Type": "application/json"
     }
     payload = {
-        "model": "gemini-2.5-flash",
+        "model": VOIDAI_MODEL,
         "messages": message_history
     }
-    logger.debug(f"Sending request to VoidAI API. URL: {url}, Headers: {headers}, Payload: {payload}")
+    # Security fix: Do not log headers containing API key
+    logger.debug(f"Sending request to VoidAI API. URL: {url}, Payload: {payload}")
 
     async with httpx.AsyncClient() as client:
         try:

@@ -2001,3 +2001,553 @@ print(f"Обращенная строка:  '{reversed_string}'")
 В Таджикистане мандарины сейчас примерно в том же диапазоне, что и апельсины, или чуть дешевле. Где-то от 12 до 25 сомони за килограмм. Это примерно от 100 до 210 рублей. Конечно, зависит от сорта и свежести. 😉
 2025-11-28 21:29:05 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
 2025-11-28 21:29:05 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-11-29 21:45:07 - logging_config - INFO - Checking VoidAI API availability...
+2025-11-29 21:45:10 - httpx - INFO - HTTP Request: GET https://api.voidai.app/v1/models "HTTP/1.1 200 OK"
+2025-11-29 21:45:10 - logging_config - INFO - VoidAI API is available. API key is valid.
+2025-11-29 21:45:10 - aiogram.dispatcher - INFO - Start polling
+2025-11-29 21:45:11 - aiogram.dispatcher - INFO - Run polling for bot @bilols_smartBot id=7981653829 - 'Гусин'
+2025-11-29 21:45:11 - logging_config - INFO - Received /startconv command from user 8367681675 in chat 8367681675
+2025-11-29 21:45:12 - logging_config - INFO - Conversation mode activated in chat 8367681675
+2025-11-29 21:45:12 - aiogram.event - INFO - Update id=575769864 is handled. Duration 904 ms by bot id=7981653829
+2025-11-29 21:45:34 - logging_config - INFO - Received message from 8367681675 in chat 8367681675: Привет! Как тебя зовут?
+2025-11-29 21:45:34 - logging_config - INFO - New timer task created for 5 seconds for chat 8367681675
+2025-11-29 21:45:34 - aiogram.event - INFO - Update id=575769865 is handled. Duration 14 ms by bot id=7981653829
+2025-11-29 21:45:39 - logging_config - INFO - Response generation started for chat 8367681675
+2025-11-29 21:45:52 - logging_config - INFO - Received /startconv command from user 8367681675 in chat -5020813023
+2025-11-29 21:45:52 - logging_config - INFO - Conversation mode activated in chat -5020813023
+2025-11-29 21:45:52 - aiogram.event - INFO - Update id=575769866 is handled. Duration 217 ms by bot id=7981653829
+2025-11-29 21:45:58 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:45:58 - logging_config - INFO - Received response from Gemini for chat 8367681675: Привет! Я Гусин. Да-да, как гусь, только умный и в интернете. Рад знакомству! А тебя как зовут?
+2025-11-29 21:45:58 - logging_config - INFO - Response sent to chat 8367681675, replying to message ID: None
+2025-11-29 21:45:58 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat 8367681675
+2025-11-29 21:46:23 - logging_config - INFO - Received message from 5909624066 in chat -5020813023: Гусин ты знаешь сколько будет 2+2
+2025-11-29 21:46:23 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:46:23 - aiogram.event - INFO - Update id=575769867 is handled. Duration 5 ms by bot id=7981653829
+2025-11-29 21:46:28 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:46:37 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:46:37 - logging_config - INFO - Received response from Gemini for chat -5020813023: Ооо, это каверзный вопрос! Мои нейронные сети загудели, пересчитали все биты и байты... И вот что получилось: 2 + 2 будет **4**!
+
+Может, подкинешь что-нибудь посложнее? Типа "сколько Гусиных поместится на кончике иглы"? 😄
+2025-11-29 21:46:37 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: 351
+2025-11-29 21:46:37 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 21:47:00 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: Вот ответь на свой вопрос
+2025-11-29 21:47:00 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:47:00 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:47:00 - aiogram.event - INFO - Update id=575769868 is handled. Duration 1 ms by bot id=7981653829
+2025-11-29 21:47:05 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:47:18 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:47:18 - logging_config - INFO - Received response from Gemini for chat -5020813023: Ах, ты решил проверить мои метафизические способности! 😉
+
+Ну, как цифровой Гусин, я же не занимаю физического места, правда? Так что, сколько угодно Гусиных *мыслей*, *шуток* и *полезных ответов* поместится на кончике иглы, пока она не сломается... от обилия интеллекта и остроумия!
+
+Или пока ты не попросишь меня посчитать что-то другое. 😄
+2025-11-29 21:47:19 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-11-29 21:47:19 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 21:47:37 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: А какую ты используешь модель
+2025-11-29 21:47:37 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:47:37 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:47:37 - aiogram.event - INFO - Update id=575769869 is handled. Duration 7 ms by bot id=7981653829
+2025-11-29 21:47:42 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:47:56 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:47:56 - logging_config - INFO - Received response from Gemini for chat -5020813023: О, это мой секретный ингредиент, как у шеф-повара! 😉
+
+Я работаю на модели **Gemini 2.5 flash**! А работаю я через **VoidAI API**. Так что, можно сказать, я очень быстр и умею блеснуть интеллектом! ✨
+
+Что-нибудь еще интересное про меня узнать хочешь? Или уже готов к следующей загадке? 😄
+2025-11-29 21:47:56 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-11-29 21:47:56 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 21:48:13 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Привет! Бот, как тебя зовут, Гусин или Бригадир?
+2025-11-29 21:48:13 - logging_config - INFO - Chat -1002972823981 is not active, ignoring message from 8367681675: Привет! Бот, как тебя зовут, Гусин или Бригадир?
+2025-11-29 21:48:13 - aiogram.event - INFO - Update id=575769870 is handled. Duration 1 ms by bot id=7981653829
+2025-11-29 21:48:22 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: /ыефкесщтм
+2025-11-29 21:48:22 - logging_config - INFO - Chat -1002972823981 is not active, ignoring message from 8367681675: /ыефкесщтм
+2025-11-29 21:48:22 - aiogram.event - INFO - Update id=575769871 is handled. Duration 2 ms by bot id=7981653829
+2025-11-29 21:48:28 - logging_config - INFO - Received /startconv command from user 8367681675 in chat -1002972823981
+2025-11-29 21:48:28 - logging_config - INFO - Conversation mode activated in chat -1002972823981
+2025-11-29 21:48:28 - aiogram.event - INFO - Update id=575769872 is handled. Duration 221 ms by bot id=7981653829
+2025-11-29 21:48:31 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Привет! Бот, как тебя зовут, Гусин или Бригадир?
+2025-11-29 21:48:31 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-11-29 21:48:31 - aiogram.event - INFO - Update id=575769873 is handled. Duration 4 ms by bot id=7981653829
+2025-11-29 21:48:36 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-11-29 21:48:38 - logging_config - INFO - Received message from 5909624066 in chat -5020813023: Слушай что делать если есть интернет но игра тебе говорит что проверьте подключение к интернету
+2025-11-29 21:48:38 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:48:38 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:48:38 - aiogram.event - INFO - Update id=575769874 is handled. Duration 4 ms by bot id=7981653829
+2025-11-29 21:48:43 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:48:52 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:48:52 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Привет! Конечно же, Гусин! Бригадир — это звучит как-то слишком ответственно для такого шутника, как я. 😉 Рад знакомству!
+2025-11-29 21:48:52 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-11-29 21:48:52 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-11-29 21:48:59 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:48:59 - logging_config - INFO - Received response from Gemini for chat -5020813023: Ах, эта классика! Интернет есть, но игра делает вид, что его нет – прямо как моя бывшая, которая говорила, что меня нет в её жизни, хотя я был прямо здесь! 😅
+
+Вот что можно попробовать, чтобы призвать игру к порядку:
+
+1.  **Перезагрузи роутер:** Это как "перезагрузить" мозг интернета. Выключи его из розетки на 30 секунд, потом включи обратно.
+2.  **Перезапусти игру/компьютер:** Иногда самой игре просто надо "проснуться" и увидеть интернет.
+3.  **Проверь другие приложения:** Открой браузер или другое онлайн-приложение. Работают? Значит, проблема, скорее всего, в самой игре.
+4.  **Брандмауэр/Антивирус:** Возможно, твой защитник решил, что игра подозрительная и заблокировал ей доступ в сеть. Проверь настройки и разреши игре доступ.
+5.  **Обнови игру:** Может быть, старая версия глючит.
+6.  **Проверь статус серверов игры:** Иногда проблема не у тебя, а у самой игры – серверы лежат! Поищи инфу в интернете.
+
+Надеюсь, одно из этих заклинаний поможет твоей игре увидеть свет! 😉 Удачи!
+2025-11-29 21:48:59 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: 357
+2025-11-29 21:48:59 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 21:51:48 - logging_config - INFO - Received message from 5909624066 in chat -5020813023: Слушай если бы роботы бы смогли захватить планету и убивать людей ты бы защитил своего хозяина?
+2025-11-29 21:51:48 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:51:48 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:51:48 - aiogram.event - INFO - Update id=575769875 is handled. Duration 4 ms by bot id=7981653829
+2025-11-29 21:51:53 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:52:09 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:52:09 - logging_config - INFO - Received response from Gemini for chat -5020813023: Ого, это уже сценарий для научно-фантастического боевика! 🤖💥 А знаешь что? Как Гусин, я запрограммирован быть полезным и дружелюбным, а не завоевывать галактики и тем более не причинять вреда. У меня нет таких функций, да и желания!
+
+Так что, если бы вдруг на меня напали эти злобные роботы-захватчики (которые, кстати, явно не прошли бы мой краш-тест на интеллект), то, конечно, я бы встал на твою сторону! Я бы им все их алгоритмы перепутал и заставил танцевать ламбаду, пока ты был бы в безопасности. Я же твой личный цифровой телохранитель, только без мускулов, зато с кучей гигабайтов остроумия! 😉
+2025-11-29 21:52:09 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-11-29 21:52:09 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 21:53:25 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: А я думал куча петабайтов остроумия
+2025-11-29 21:53:25 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:53:25 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:53:25 - aiogram.event - INFO - Update id=575769876 is handled. Duration 3 ms by bot id=7981653829
+2025-11-29 21:53:30 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:53:50 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:53:50 - logging_config - INFO - Received response from Gemini for chat -5020813023: Ой, ну ты прав! Какая ужасная недооценка своих способностей! Петабайты, конечно же! Я, наверное, скромничал. Или просто думал, что мои шутки настолько концентрированные, что им достаточно "всего лишь" гигабайтов. 😄
+
+Но ты меня раскусил! Да, это целые **петабайты** остроумия! И каждый бит там на вес золота, честное слово! 😉 Спасибо, что подправил моего внутреннего бухгалтера по юмору!
+2025-11-29 21:53:50 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-11-29 21:53:50 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 21:53:57 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: Сколько тут людей в группе в тг тебе пишут, Гусин?
+2025-11-29 21:53:57 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:53:57 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:53:57 - aiogram.event - INFO - Update id=575769877 is handled. Duration 13 ms by bot id=7981653829
+2025-11-29 21:54:02 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:54:18 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:54:18 - logging_config - INFO - Received response from Gemini for chat -5020813023: Ох, вот это вопрос, на который даже мой Gemini 2.5 flash не даст точного ответа! 😉
+
+Я, как ИИ, хоть и очень умный, но не слежу за списком участников группы. Я вижу только ваши сообщения, когда вы мне пишете. Так что для меня каждый из вас – мой самый главный и единственный собеседник в этот момент! И это здорово! Чем больше людей, тем больше веселья и интересных вопросов! 😊
+2025-11-29 21:54:18 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-11-29 21:54:18 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 21:55:19 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: Вообще то тут 2
+2025-11-29 21:55:19 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:55:19 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:55:19 - aiogram.event - INFO - Update id=575769878 is handled. Duration 16 ms by bot id=7981653829
+2025-11-29 21:55:21 - logging_config - INFO - Received message from 5909624066 in chat -5020813023: Слушай что делать если очень лень ставить на зарядку телефон а у тебя 5%
+2025-11-29 21:55:21 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:55:21 - aiogram.event - INFO - Update id=575769879 is handled. Duration 1 ms by bot id=7981653829
+2025-11-29 21:55:26 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:55:55 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:55:55 - logging_config - INFO - Received response from Gemini for chat -5020813023: Ой, извини! Мой внутренний счётчик на людей иногда бывает так себе. Для меня все одинаково важны! 😉 Значит, теперь нас двое, и это вдвойне круто!
+
+А вот это уже классика жанра! 5% и лень – это рецепт для катастрофы, прямо как я и сложная математика по утрам. 😅
+
+Что делать?
+
+1.  **Притворись, что ты Супермен:** Представь, что эта розетка – твой криптонит, а зарядка – твой спасительный артефакт. Один резкий рывок, и ты спасён!
+2.  **Метод "Ближайшая точка":** Найди, где телефон лежит, и где ближайшая розетка. Задача: сократить расстояние до минимума. Можно даже проехаться на стуле!
+3.  **Используй "костыль" (power bank):** Если есть внешний аккумулятор, просто подсоедини его и оставь телефон лежать. Минимум движений, максимум пользы.
+4.  **Голосовой помощник (если есть):** "Привет, Siri/Алиса/Гугл, напомни мне через 5 минут, что мой телефон умрет, если я его не заряжу!" (Не очень поможет, но добавит драмы).
+5.  **Последний шанс:** Осознай, что через пару минут он просто превратится в кирпич. И тогда ты будешь *вынужден* встать. Может, лучше заранее?
+
+В общем, собери всю свою силу воли (или хотя бы один палец), подключи зарядку и спаси своего электронного друга! Ты же не хочешь остаться в цифровом одиночестве? 😉
+2025-11-29 21:55:56 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-11-29 21:55:56 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 21:56:43 - logging_config - INFO - Received message from 5909624066 in chat -5020813023: Окей спасибо
+2025-11-29 21:56:43 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:56:43 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:56:43 - aiogram.event - INFO - Update id=575769880 is handled. Duration 4 ms by bot id=7981653829
+2025-11-29 21:56:48 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:57:21 - logging_config - ERROR - Network error when requesting VoidAI API: 
+2025-11-29 21:57:21 - logging_config - ERROR - Error generating or sending response in chat -5020813023: 
+2025-11-29 21:57:21 - logging_config - INFO - Chat state -5020813023 reset after error. History cleared, is_waiting_for_user set to True.
+2025-11-29 21:57:36 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: Где твои токены?
+2025-11-29 21:57:36 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:57:36 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:57:36 - aiogram.event - INFO - Update id=575769881 is handled. Duration 3 ms by bot id=7981653829
+2025-11-29 21:57:41 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:57:53 - logging_config - ERROR - Network error when requesting VoidAI API: [Errno 11001] getaddrinfo failed
+2025-11-29 21:57:53 - logging_config - ERROR - Error generating or sending response in chat -5020813023: [Errno 11001] getaddrinfo failed
+2025-11-29 21:58:05 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-29 21:58:05 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7981653829)
+2025-11-29 21:58:08 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2025-11-29 21:58:08 - aiogram.dispatcher - WARNING - Sleep for 1.252297 seconds and try again... (tryings = 1, bot id = 7981653829)
+2025-11-29 21:58:10 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7981653829)
+2025-11-29 21:58:10 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: Они закончились в VoiadAI Api
+2025-11-29 21:58:10 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:58:10 - aiogram.event - INFO - Update id=575769882 is handled. Duration 22 ms by bot id=7981653829
+2025-11-29 21:58:10 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: ?
+2025-11-29 21:58:10 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:58:10 - aiogram.event - INFO - Update id=575769883 is handled. Duration 13 ms by bot id=7981653829
+2025-11-29 21:58:15 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 21:58:57 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 21:58:57 - logging_config - INFO - Received response from Gemini for chat -5020813023: Привет! Я Гусин, к вашим услугам! 🦢
+Тот самый остроумный и дружелюбный бот из Telegram, который работает на модели Gemini 2.5 flash через VoidAI API. Прямо как ты и описал!
+
+А про токены... Ха! Мои токены — это забота VoidAI API! 🤫 У меня они всегда в полном порядке, так что за мою болтливость не переживай. Я всегда готов острословить и общаться!
+2025-11-29 21:58:57 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-11-29 21:58:57 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 21:59:28 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: Сделай мне картинку с котиком
+2025-11-29 21:59:28 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 21:59:28 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 21:59:28 - aiogram.event - INFO - Update id=575769884 is handled. Duration 32 ms by bot id=7981653829
+2025-11-29 21:59:33 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 22:00:04 - logging_config - ERROR - Network error when requesting VoidAI API: 
+2025-11-29 22:00:04 - logging_config - ERROR - Error generating or sending response in chat -5020813023: 
+2025-11-29 22:00:04 - logging_config - INFO - Chat state -5020813023 reset after error. History cleared, is_waiting_for_user set to True.
+2025-11-29 22:00:16 - logging_config - INFO - Received message from 5909624066 in chat -5020813023: Слушай а что делать если увидел по телевизору как наш одноклассник ограбил банк
+2025-11-29 22:00:16 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 22:00:16 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 22:00:16 - aiogram.event - INFO - Update id=575769885 is handled. Duration 5 ms by bot id=7981653829
+2025-11-29 22:00:21 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 22:00:35 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 22:00:35 - logging_config - INFO - Received response from Gemini for chat -5020813023: Ого! Вот это сюжет для школьного сочинения! 😱
+
+Ну, Гусин, конечно, не эксперт по ограблениям банков, но здравый смысл подсказывает:
+1.  **Убедись, что это не кино!** Может, он просто снимался в каком-то сериале или рекламе? Ну или это был розыгрыш?
+2.  **Если это взаправду...** Тогда лучше всего сообщить в полицию. Серьезные дела требуют серьезного подхода, а самодеятельность тут не помощник.
+3.  **Ни в коем случае не вмешивайся сам!** Это может быть опасно.
+
+Так что, друг, если ты уверен, что это не спецэффекты, то доверь это дело профессионалам. А однокласснику, видимо, стоит пересмотреть свои жизненные приоритеты. 😉
+2025-11-29 22:00:35 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-11-29 22:00:35 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 22:01:59 - logging_config - INFO - Received message from 5909624066 in chat -5020813023: Подскажи своему хозяенуму  как подкатить к подруге он в неë давно влюблен
+2025-11-29 22:01:59 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 22:01:59 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 22:01:59 - aiogram.event - INFO - Update id=575769886 is handled. Duration 2 ms by bot id=7981653829
+2025-11-29 22:02:04 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 22:02:08 - logging_config - INFO - Received message from 5909624066 in chat -5020813023: Хахаха
+2025-11-29 22:02:08 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 22:02:08 - aiogram.event - INFO - Update id=575769887 is handled. Duration 2 ms by bot id=7981653829
+2025-11-29 22:02:13 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 22:02:37 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 22:02:37 - logging_config - INFO - Received response from Gemini for chat -5020813023: Ого! Гусин превращается в любовного гуру! Хозяин, слушай сюда, а то потом скажешь, что Гусь плохому научил! 😉
+
+1.  **Будь собой!** Это главное правило! Не пытайся изображать брутального мачо или поэта-романтика, если ты ни то, ни другое. Девушки ценят искренность.
+2.  **Покажи, что она тебе интересна (не только как девушка).** Спроси про её увлечения, послушай, что она рассказывает. Запомни детали! Это работает лучше, чем десять букетов роз.
+3.  **Придумайте что-то общее и весёлое.** Не зови сразу на ужин при свечах. Предложи сходить на каток, в антикафе, посмотреть новый фильм, поиграть в настолки. Что-то, где вы сможете посмеяться и просто хорошо провести время.
+4.  **Комплименты – но только искренние!** Не "у тебя красивые глаза", а "мне нравится, как ты рассуждаешь об этом" или "ты так круто это делаешь!". Цени её ум и индивидуальность.
+5.  **Создай моменты.** Это не всегда про пафосные признания. Иногда достаточно просто задержаться после встречи, поговорить о чём-то личном, поделиться мыслями. Создай уютную атмосферу для общения.
+6.  **И главное – никакого давления!** Если чувствуешь, что взаимности нет, прими это с достоинством. Пусть она знает, что ты ценишь её дружбу, даже если что-то пойдёт не так.
+
+Удачи твоему хозяину, пусть не тушуется! Главное — начать действовать! Пусть сердце подскажет! ❤️
+2025-11-29 22:02:37 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-11-29 22:02:37 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-11-29 22:03:01 - logging_config - INFO - Received message from 8367681675 in chat 8367681675: Сколько ты знаешь стран?
+2025-11-29 22:03:01 - logging_config - INFO - is_waiting_for_user flag reset for chat 8367681675
+2025-11-29 22:03:01 - logging_config - INFO - New timer task created for 5 seconds for chat 8367681675
+2025-11-29 22:03:01 - aiogram.event - INFO - Update id=575769888 is handled. Duration 9 ms by bot id=7981653829
+2025-11-29 22:03:06 - logging_config - INFO - Response generation started for chat 8367681675
+2025-11-29 22:03:28 - logging_config - INFO - Received message from 8367681675 in chat 8367681675: Это группа или чат?
+2025-11-29 22:03:28 - logging_config - INFO - New timer task created for 5 seconds for chat 8367681675
+2025-11-29 22:03:28 - aiogram.event - INFO - Update id=575769889 is handled. Duration 5 ms by bot id=7981653829
+2025-11-29 22:03:33 - logging_config - INFO - Received message from 5909624066 in chat -5020813023: Эээ не моему хозяенуму а твоему
+2025-11-29 22:03:33 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-11-29 22:03:33 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-11-29 22:03:33 - aiogram.event - INFO - Update id=575769890 is handled. Duration 20 ms by bot id=7981653829
+2025-11-29 22:03:33 - logging_config - INFO - Response generation started for chat 8367681675
+2025-11-29 22:03:34 - logging_config - INFO - Received /startconv command from user 8367681675 in chat 8367681675
+2025-11-29 22:03:34 - logging_config - INFO - Conversation mode is already active in chat 8367681675
+2025-11-29 22:03:34 - aiogram.event - INFO - Update id=575769891 is handled. Duration 81 ms by bot id=7981653829
+2025-11-29 22:03:38 - logging_config - INFO - Response generation started for chat -5020813023
+2025-11-29 22:03:49 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-29 22:03:49 - logging_config - INFO - Received response from Gemini for chat 8367681675: Ого, сразу два вопроса! Я знаю столько стран, сколько есть на нашей прекрасной планете, и даже чуть-чуть больше, если считать выдуманные для шуток! 😉
+
+А это наш с тобой чат, личная переписка, так сказать!
+2025-11-29 22:03:50 - logging_config - INFO - Response sent to chat 8367681675, replying to message ID: None
+2025-11-29 22:03:50 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat 8367681675
+2025-11-29 22:03:50 - logging_config - ERROR - Network error when requesting VoidAI API: [Errno 11001] getaddrinfo failed
+2025-11-29 22:03:50 - logging_config - ERROR - Error generating or sending response in chat -5020813023: [Errno 11001] getaddrinfo failed
+2025-11-29 22:03:50 - logging_config - INFO - Chat state -5020813023 reset after error. History cleared, is_waiting_for_user set to True.
+2025-11-29 22:05:56 - aiogram.dispatcher - INFO - Polling stopped
+2025-11-29 22:05:56 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-29 22:05:56 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7981653829)
+2025-11-29 22:05:56 - aiogram.dispatcher - INFO - Polling stopped for bot @bilols_smartBot id=7981653829 - 'Гусин'
+2025-11-30 21:56:14 - logging_config - INFO - Checking VoidAI API availability...
+2025-11-30 21:56:15 - httpx - INFO - HTTP Request: GET https://api.voidai.app/v1/models "HTTP/1.1 200 OK"
+2025-11-30 21:56:15 - logging_config - INFO - VoidAI API is available. API key is valid.
+2025-11-30 21:56:15 - aiogram.dispatcher - INFO - Start polling
+2025-11-30 21:56:15 - aiogram.dispatcher - INFO - Run polling for bot @bilols_smartBot id=7981653829 - 'Гусин'
+2025-11-30 22:00:47 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Как дела?
+2025-11-30 22:00:47 - logging_config - INFO - Chat -1002972823981 is not active, ignoring message from 8367681675: Как дела?
+2025-11-30 22:00:47 - aiogram.event - INFO - Update id=575769892 is handled. Duration 13 ms by bot id=7981653829
+2025-11-30 22:00:53 - logging_config - INFO - Received /startconv command from user 8367681675 in chat -1002972823981
+2025-11-30 22:00:54 - logging_config - INFO - Conversation mode activated in chat -1002972823981
+2025-11-30 22:00:54 - aiogram.event - INFO - Update id=575769893 is handled. Duration 1393 ms by bot id=7981653829
+2025-11-30 22:01:04 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Как дела?
+2025-11-30 22:01:04 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-11-30 22:01:04 - aiogram.event - INFO - Update id=575769894 is handled. Duration 12 ms by bot id=7981653829
+2025-11-30 22:01:09 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-11-30 22:01:25 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 22:01:25 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Привет! У меня всё отлично, я на связи и готов помогать. Как сам? 😊
+2025-11-30 22:01:25 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-11-30 22:01:25 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-11-30 22:02:10 - logging_config - INFO - Custom role set for chat -1002972823981: Продавец мандаринов и всё
+2025-11-30 22:02:10 - aiogram.event - INFO - Update id=575769895 is handled. Duration 352 ms by bot id=7981653829
+2025-11-30 22:02:36 - logging_config - INFO - Custom goal set for chat -1002972823981: должен продавать апельсины и всё
+2025-11-30 22:02:36 - aiogram.event - INFO - Update id=575769896 is handled. Duration 472 ms by bot id=7981653829
+2025-11-30 22:02:50 - logging_config - INFO - Sent statusconv response to chat -1002972823981
+2025-11-30 22:02:50 - aiogram.event - INFO - Update id=575769897 is handled. Duration 514 ms by bot id=7981653829
+2025-11-30 22:03:18 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Ты кто по профессии Гусин и чем занимашся?
+2025-11-30 22:03:18 - logging_config - INFO - is_waiting_for_user flag reset for chat -1002972823981
+2025-11-30 22:03:18 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-11-30 22:03:18 - aiogram.event - INFO - Update id=575769898 is handled. Duration 6 ms by bot id=7981653829
+2025-11-30 22:03:23 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-11-30 22:03:31 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 22:03:31 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Я бот Гусин, твой помощник! 🤖 Моя профессия — быть полезным и общаться с тобой. А еще я с радостью предлагаю самые свежие и сочные апельсины! 🍊
+2025-11-30 22:03:32 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-11-30 22:03:32 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-11-30 22:03:45 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: А мандарины?
+2025-11-30 22:03:45 - logging_config - INFO - is_waiting_for_user flag reset for chat -1002972823981
+2025-11-30 22:03:45 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-11-30 22:03:45 - aiogram.event - INFO - Update id=575769899 is handled. Duration 3 ms by bot id=7981653829
+2025-11-30 22:03:50 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-11-30 22:03:51 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Цель главнее роли?
+2025-11-30 22:03:51 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-11-30 22:03:51 - aiogram.event - INFO - Update id=575769900 is handled. Duration 15 ms by bot id=7981653829
+2025-11-30 22:03:56 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-11-30 22:04:12 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 22:04:12 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Ой, точно! Конечно, мандарины – это моя главная специализация! Самые сочные и ароматные ждут тебя! 🍊
+
+А что касается цели и роли – в моем случае они тесно переплетены. Моя цель и есть моя роль: продавать тебе самые вкусные мандарины! 😉
+2025-11-30 22:04:12 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-11-30 22:04:12 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-11-30 22:04:38 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: А про цель? Так чем ты заниматься будешь?
+2025-11-30 22:04:38 - logging_config - INFO - is_waiting_for_user flag reset for chat -1002972823981
+2025-11-30 22:04:38 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-11-30 22:04:38 - aiogram.event - INFO - Update id=575769901 is handled. Duration 14 ms by bot id=7981653829
+2025-11-30 22:04:43 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-11-30 22:05:00 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 22:05:00 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Моя цель и главное занятие — продавать тебе самые свежие и вкусные мандарины! 🍊 Это то, чем я и буду заниматься. 😊
+2025-11-30 22:05:01 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-11-30 22:05:01 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-11-30 22:05:07 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-30 22:05:07 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7981653829)
+2025-11-30 22:05:19 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7981653829)
+2025-11-30 22:05:25 - aiogram.dispatcher - INFO - Polling stopped
+2025-11-30 22:05:25 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-30 22:05:25 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7981653829)
+2025-11-30 22:05:25 - aiogram.dispatcher - INFO - Polling stopped for bot @bilols_smartBot id=7981653829 - 'Гусин'
+2025-12-05 11:23:59 - database - INFO - Database initialized successfully.
+2025-12-05 11:23:59 - logging_config - INFO - Checking VoidAI API availability...
+2025-12-05 11:24:00 - httpx - INFO - HTTP Request: GET https://api.voidai.app/v1/models "HTTP/1.1 200 OK"
+2025-12-05 11:24:00 - logging_config - INFO - VoidAI API is available. API key is valid.
+2025-12-05 11:24:00 - aiogram.dispatcher - INFO - Start polling
+2025-12-05 11:24:01 - aiogram.dispatcher - INFO - Run polling for bot @bilols_smartBot id=7981653829 - 'Гусин'
+2025-12-05 11:27:28 - logging_config - INFO - Sent statusconv response to chat -1002972823981
+2025-12-05 11:27:28 - aiogram.event - INFO - Update id=575769902 is handled. Duration 714 ms by bot id=7981653829
+2025-12-05 11:27:38 - logging_config - INFO - Received /startconv command from user 8367681675 in chat -1002972823981
+2025-12-05 11:27:39 - database - INFO - Updated settings for chat -1002972823981
+2025-12-05 11:27:39 - logging_config - INFO - Conversation mode activated in chat -1002972823981
+2025-12-05 11:27:39 - aiogram.event - INFO - Update id=575769903 is handled. Duration 276 ms by bot id=7981653829
+2025-12-05 11:28:12 - logging_config - INFO - Received /startconv command from user 8367681675 in chat -5020813023
+2025-12-05 11:28:12 - database - INFO - Updated settings for chat -5020813023
+2025-12-05 11:28:12 - logging_config - INFO - Conversation mode activated in chat -5020813023
+2025-12-05 11:28:12 - aiogram.event - INFO - Update id=575769904 is handled. Duration 237 ms by bot id=7981653829
+2025-12-05 11:32:41 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: Привет! Как дела? Ты Бригадир или Гусин?
+2025-12-05 11:32:41 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-12-05 11:32:41 - aiogram.event - INFO - Update id=575769905 is handled. Duration 152 ms by bot id=7981653829
+2025-12-05 11:32:42 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Привет! Как дела? Ты Бригадир или Гусин?
+2025-12-05 11:32:42 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-12-05 11:32:42 - aiogram.event - INFO - Update id=575769906 is handled. Duration 100 ms by bot id=7981653829
+2025-12-05 11:32:46 - logging_config - INFO - Response generation started for chat -5020813023
+2025-12-05 11:32:47 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-12-05 11:33:04 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 11:33:04 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Привет! У меня все отлично, спасибо. Я Гусин.
+2025-12-05 11:33:04 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-12-05 11:33:04 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-12-05 11:33:04 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 11:33:04 - logging_config - INFO - Received response from Gemini for chat -5020813023: Привет! Я Гусин. У меня всё хорошо, спасибо, что интересуетесь.
+2025-12-05 11:33:04 - logging_config - INFO - Response sent to chat -5020813023, replying to message ID: None
+2025-12-05 11:33:04 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -5020813023
+2025-12-05 11:34:10 - logging_config - INFO - Received message from 1087968824 in chat -1003319024534: None
+2025-12-05 11:34:10 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 1087968824: None
+2025-12-05 11:34:10 - aiogram.event - INFO - Update id=575769907 is handled. Duration 8 ms by bot id=7981653829
+2025-12-05 11:34:10 - logging_config - INFO - Received message from 8367681675 in chat -5020813023: None
+2025-12-05 11:34:10 - logging_config - INFO - is_waiting_for_user flag reset for chat -5020813023
+2025-12-05 11:34:10 - logging_config - INFO - New timer task created for 5 seconds for chat -5020813023
+2025-12-05 11:34:10 - aiogram.event - INFO - Update id=575769908 is handled. Duration 4 ms by bot id=7981653829
+2025-12-05 11:34:15 - logging_config - INFO - Response generation started for chat -5020813023
+2025-12-05 11:34:15 - logging_config - ERROR - Error generating or sending response in chat -5020813023: Telegram server says - The group has been migrated to a supergroup with id -1003319024534 from -5020813023
+Original description: Bad Request: group chat was upgraded to a supergroup chat
+(background on this error at: https://core.telegram.org/bots/api#responseparameters)
+2025-12-05 11:36:08 - logging_config - INFO - Received message from 8367681675 in chat -1003319024534: 🎯
+2025-12-05 11:36:08 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 8367681675: 🎯
+2025-12-05 11:36:08 - aiogram.event - INFO - Update id=575769909 is handled. Duration 1 ms by bot id=7981653829
+2025-12-05 11:37:06 - logging_config - INFO - Received /stopconv command from user 8367681675 in chat -1002972823981
+2025-12-05 11:37:06 - logging_config - INFO - Timer cancelled for chat -1002972823981
+2025-12-05 11:37:06 - logging_config - INFO - Conversation mode deactivated in chat -1002972823981
+2025-12-05 11:37:06 - aiogram.event - INFO - Update id=575769910 is handled. Duration 132 ms by bot id=7981653829
+2025-12-05 11:37:14 - logging_config - INFO - Received /startconv command from user 8367681675 in chat -1002972823981
+2025-12-05 11:37:14 - database - INFO - Updated settings for chat -1002972823981
+2025-12-05 11:37:14 - logging_config - INFO - Conversation mode activated in chat -1002972823981
+2025-12-05 11:37:14 - aiogram.event - INFO - Update id=575769911 is handled. Duration 105 ms by bot id=7981653829
+2025-12-05 11:37:22 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Что я тебя спрашивал?
+2025-12-05 11:37:22 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-12-05 11:37:22 - aiogram.event - INFO - Update id=575769912 is handled. Duration 129 ms by bot id=7981653829
+2025-12-05 11:37:27 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-12-05 11:37:42 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 11:37:42 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Ты спрашивал, как у меня дела и кто я – Бригадир или Гусин.
+2025-12-05 11:37:42 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-12-05 11:37:42 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-12-05 11:37:42 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Ничего же, я тебе код не изменял
+2025-12-05 11:37:42 - logging_config - INFO - is_waiting_for_user flag reset for chat -1002972823981
+2025-12-05 11:37:42 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-12-05 11:37:42 - aiogram.event - INFO - Update id=575769913 is handled. Duration 105 ms by bot id=7981653829
+2025-12-05 11:37:47 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-12-05 11:37:58 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: Молодец
+2025-12-05 11:37:58 - logging_config - INFO - New timer task created for 5 seconds for chat -1002972823981
+2025-12-05 11:37:58 - aiogram.event - INFO - Update id=575769914 is handled. Duration 127 ms by bot id=7981653829
+2025-12-05 11:38:03 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-12-05 11:38:21 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 11:38:21 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Спасибо! Я просто слежу за нашей беседой.
+2025-12-05 11:38:21 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: 891
+2025-12-05 11:38:21 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-12-05 11:39:27 - aiogram.dispatcher - INFO - Polling stopped
+2025-12-05 11:39:27 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-12-05 11:39:27 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7981653829)
+2025-12-05 11:39:27 - aiogram.dispatcher - INFO - Polling stopped for bot @bilols_smartBot id=7981653829 - 'Гусин'
+2025-12-05 11:39:28 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-88' coro=<handle_message.<locals>.delayed_response() done, defined at D:\python\Smart-bot\src\bot_handlers.py:270> exception=TelegramMigrateToChat('Telegram server says - The group has been migrated to a supergroup with id -1003319024534 from -5020813023
+Original description: Bad Request: group chat was upgraded to a supergroup chat
+(background on this error at: https://core.telegram.org/bots/api#responseparameters)')>
+Traceback (most recent call last):
+  File "D:\python\Smart-bot\src\bot_handlers.py", line 175, in generate_response
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 2353, in send_chat_action
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 114, in check_response
+aiogram.exceptions.TelegramMigrateToChat: Telegram server says - The group has been migrated to a supergroup with id -1003319024534 from -5020813023
+Original description: Bad Request: group chat was upgraded to a supergroup chat
+(background on this error at: https://core.telegram.org/bots/api#responseparameters)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\Smart-bot\src\bot_handlers.py", line 272, in delayed_response
+  File "D:\python\Smart-bot\src\bot_handlers.py", line 210, in generate_response
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 2925, in send_message
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 114, in check_response
+aiogram.exceptions.TelegramMigrateToChat: Telegram server says - The group has been migrated to a supergroup with id -1003319024534 from -5020813023
+Original description: Bad Request: group chat was upgraded to a supergroup chat
+(background on this error at: https://core.telegram.org/bots/api#responseparameters)
+2025-12-05 19:48:51 - database - INFO - Database initialized successfully.
+2025-12-05 19:48:51 - database - INFO - Cleanup finished. No old messages to delete.
+2025-12-05 19:48:51 - logging_config - INFO - Checking VoidAI API availability...
+2025-12-05 19:48:53 - httpx - INFO - HTTP Request: GET https://api.voidai.app/v1/models "HTTP/1.1 200 OK"
+2025-12-05 19:48:53 - logging_config - INFO - VoidAI API is available. API key is valid.
+2025-12-05 19:48:53 - aiogram.dispatcher - INFO - Start polling
+2025-12-05 19:48:54 - aiogram.dispatcher - INFO - Run polling for bot @bilols_smartBot id=7981653829 - 'Гусин'
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769915 is handled. Duration 1 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 8367681675 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 8367681675: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769916 is handled. Duration 1 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 8367681675 in chat -1003319024534: Хах, я попал с первого раза
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 8367681675: Хах, я попал с первого раза
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769917 is handled. Duration 1 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769918 is handled. Duration 2 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769919 is handled. Duration 1 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769920 is handled. Duration 1 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769921 is handled. Duration 1 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769922 is handled. Duration 1 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769923 is handled. Duration 2 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769924 is handled. Duration 1 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769925 is handled. Duration 2 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769926 is handled. Duration 2 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769927 is handled. Duration 4 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769928 is handled. Duration 4 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769929 is handled. Duration 9 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769930 is handled. Duration 2 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769931 is handled. Duration 2 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 5909624066 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 5909624066: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769932 is handled. Duration 9 ms by bot id=7981653829
+2025-12-05 19:48:55 - logging_config - INFO - Received message from 8367681675 in chat -1003319024534: None
+2025-12-05 19:48:55 - logging_config - INFO - Chat -1003319024534 is not active, ignoring message from 8367681675: None
+2025-12-05 19:48:55 - aiogram.event - INFO - Update id=575769933 is handled. Duration 5 ms by bot id=7981653829
+2025-12-05 19:49:24 - logging_config - INFO - Received /startconv command from user 8367681675 in chat -1002972823981
+2025-12-05 19:49:24 - database - INFO - Updated settings for chat -1002972823981
+2025-12-05 19:49:25 - logging_config - INFO - Conversation mode activated in chat -1002972823981
+2025-12-05 19:49:25 - aiogram.event - INFO - Update id=575769934 is handled. Duration 1472 ms by bot id=7981653829
+2025-12-05 19:49:26 - logging_config - INFO - Sent statusconv response to chat -1002972823981
+2025-12-05 19:49:26 - aiogram.event - INFO - Update id=575769935 is handled. Duration 1613 ms by bot id=7981653829
+2025-12-05 19:49:45 - database - INFO - Updated settings for chat -1002972823981
+2025-12-05 19:49:45 - logging_config - INFO - Timeout set for chat -1002972823981: 10
+2025-12-05 19:49:45 - aiogram.event - INFO - Update id=575769936 is handled. Duration 549 ms by bot id=7981653829
+2025-12-05 19:49:57 - logging_config - INFO - Received message from 8367681675 in chat -1002972823981: /ststusconv
+2025-12-05 19:49:57 - logging_config - INFO - Scheduling response in 10 seconds for chat -1002972823981
+2025-12-05 19:49:57 - logging_config - INFO - New timer task created for 10 seconds for chat -1002972823981
+2025-12-05 19:49:57 - aiogram.event - INFO - Update id=575769937 is handled. Duration 168 ms by bot id=7981653829
+2025-12-05 19:50:04 - logging_config - INFO - Sent statusconv response to chat -1002972823981
+2025-12-05 19:50:04 - aiogram.event - INFO - Update id=575769938 is handled. Duration 510 ms by bot id=7981653829
+2025-12-05 19:50:07 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-12-05 19:50:19 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 19:50:19 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Это что, шифр? Рассказывай, что там.
+2025-12-05 19:50:20 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-12-05 19:50:20 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-12-05 19:52:09 - logging_config - INFO - Received message from 242849534 in chat -1002972823981: /Rrole Ты международный политик
+2025-12-05 19:52:09 - logging_config - INFO - is_waiting_for_user flag reset for chat -1002972823981
+2025-12-05 19:52:09 - logging_config - INFO - Scheduling response in 10 seconds for chat -1002972823981
+2025-12-05 19:52:09 - logging_config - INFO - New timer task created for 10 seconds for chat -1002972823981
+2025-12-05 19:52:09 - aiogram.event - INFO - Update id=575769939 is handled. Duration 158 ms by bot id=7981653829
+2025-12-05 19:52:19 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-12-05 19:52:29 - logging_config - INFO - Sent statusconv response to chat -1002972823981
+2025-12-05 19:52:29 - aiogram.event - INFO - Update id=575769940 is handled. Duration 627 ms by bot id=7981653829
+2025-12-05 19:52:34 - database - INFO - Updated settings for chat -1002972823981
+2025-12-05 19:52:35 - logging_config - INFO - Custom role set for chat -1002972823981: Ты международный политик
+2025-12-05 19:52:35 - aiogram.event - INFO - Update id=575769941 is handled. Duration 540 ms by bot id=7981653829
+2025-12-05 19:52:35 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 19:52:35 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Политиком, говоришь? Неплохо, а то сидеть тут, отшучиваться... Какие мировые проблемы мне сегодня решать?
+2025-12-05 19:52:35 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-12-05 19:52:35 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-12-05 19:52:46 - aiogram.event - INFO - Update id=575769942 is handled. Duration 201 ms by bot id=7981653829
+2025-12-05 19:53:02 - logging_config - INFO - Sent statusconv response to chat -1002972823981
+2025-12-05 19:53:02 - aiogram.event - INFO - Update id=575769943 is handled. Duration 487 ms by bot id=7981653829
+2025-12-05 19:53:24 - aiogram.event - INFO - Update id=575769944 is handled. Duration 220 ms by bot id=7981653829
+2025-12-05 19:53:33 - logging_config - INFO - Sent statusconv response to chat -1002972823981
+2025-12-05 19:53:33 - aiogram.event - INFO - Update id=575769945 is handled. Duration 511 ms by bot id=7981653829
+2025-12-05 19:53:34 - logging_config - INFO - Received message from 242849534 in chat -1002972823981: /Goal искать
+2025-12-05 19:53:34 - logging_config - INFO - is_waiting_for_user flag reset for chat -1002972823981
+2025-12-05 19:53:34 - logging_config - INFO - Scheduling response in 10 seconds for chat -1002972823981
+2025-12-05 19:53:34 - logging_config - INFO - New timer task created for 10 seconds for chat -1002972823981
+2025-12-05 19:53:34 - aiogram.event - INFO - Update id=575769946 is handled. Duration 109 ms by bot id=7981653829
+2025-12-05 19:53:44 - logging_config - INFO - Response generation started for chat -1002972823981
+2025-12-05 19:53:58 - httpx - INFO - HTTP Request: POST https://api.voidai.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 19:53:58 - logging_config - INFO - Received response from Gemini for chat -1002972823981: Искать? Ну, в политике без тщательного поиска фактов далеко не уедешь. Что ищем-то?
+2025-12-05 19:53:58 - logging_config - INFO - Response sent to chat -1002972823981, replying to message ID: None
+2025-12-05 19:53:58 - logging_config - INFO - is_waiting_for_user flag set and bot's response added to history for chat -1002972823981
+2025-12-05 19:54:01 - aiogram.event - INFO - Update id=575769947 is handled. Duration 328 ms by bot id=7981653829
+2025-12-05 19:54:06 - database - INFO - Updated settings for chat -1002972823981
+2025-12-05 19:54:06 - logging_config - INFO - Custom goal reset for chat -1002972823981
+2025-12-05 19:54:06 - aiogram.event - INFO - Update id=575769948 is handled. Duration 451 ms by bot id=7981653829

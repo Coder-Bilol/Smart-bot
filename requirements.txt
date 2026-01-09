@@ -2,3 +2,5 @@ aiogram
 python-dotenv
 httpx
 regex
+openai
+aiosqlite

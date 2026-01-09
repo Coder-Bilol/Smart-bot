@@ -1,59 +1,74 @@
-import httpx
-import asyncio
-from config import VOIDAI_API_KEY, VOIDAI_MODEL
+from openai import OpenAI, APIError
+from config import MODEL_CONFIGS, DEFAULT_MODEL
 from logging_config import logger
 
-# --- Function to get response from VoidAI ---
-async def get_voidai_response(message_history: list) -> str:
-    url = "https://api.voidai.app/v1/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {VOIDAI_API_KEY}",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "model": VOIDAI_MODEL,
-        "messages": message_history
-    }
-    # Security fix: Do not log headers containing API key
-    logger.debug(f"Sending request to VoidAI API. URL: {url}, Payload: {payload}")
+# We no longer instantiate a global client because keys differ per model.
 
-    async with httpx.AsyncClient() as client:
-        try:
-            response = await client.post(url, json=payload, headers=headers, timeout=30)  # Increase timeout
-            logger.debug(f"Received response from VoidAI API. Status: {response.status_code}, Body: {response.text}")
-            response.raise_for_status()  # Raise an exception for 4xx/5xx status codes
-            data = response.json()
-            return data["choices"][0]["message"]["content"]
-        except httpx.HTTPStatusError as e:
-            logger.error(f"HTTP error when requesting VoidAI API: {e.response.status_code} - {e.response.text}")
-            raise
-        except httpx.RequestError as e:
-            logger.error(f"Network error when requesting VoidAI API: {e}")
-            raise
-        except Exception as e:
-            logger.error(f"Unknown error when getting response from VoidAI API: {e}")
-            raise
+# --- Function to get response from LLM (OpenRouter) ---
+async def get_llm_response(message_history: list, model: str = DEFAULT_MODEL) -> str:
+    logger.debug(f"Sending request to OpenRouter. Model: {model}")
+    
+    # Retrieve configuration for the specific model
+    model_config = MODEL_CONFIGS.get(model)
+    if not model_config:
+        logger.error(f"Configuration for model {model} not found.")
+        raise ValueError(f"Unknown model: {model}")
+        
+    api_key = model_config.get("api_key")
+    if not api_key:
+        logger.error(f"API key for model {model} is not set in environment variables.")
+        raise ValueError(f"API key missing for model: {model}")
 
-
-# --- Function to check VoidAI API availability ---
-async def check_voidai_api():
-    logger.info("Checking VoidAI API availability...")
-    url = "https://api.voidai.app/v1/models"  # Endpoint to get list of models
-    headers = {
-        "Authorization": f"Bearer {VOIDAI_API_KEY}"
-    }
     try:
-        async with httpx.AsyncClient() as client:
-            response = await client.get(url, headers=headers, timeout=10)
-            response.raise_for_status()
-            logger.info("VoidAI API is available. API key is valid.")
-            return True
-    except httpx.HTTPStatusError as e:
-        logger.error(f"HTTP error when checking VoidAI API: {e.response.status_code} - {e.response.text}")
+        # Initialize client with the specific key
+        client = OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=api_key,
+        )
+
+        completion = client.chat.completions.create(
+            extra_headers={
+                "HTTP-Referer": "https://github.com/Coder-Bilol/Smart-bot", 
+                "X-Title": "Smart Bot", 
+            },
+            model=model,
+            messages=message_history
+        )
+        response_content = completion.choices[0].message.content
+        logger.debug("Received response from OpenRouter.")
+        return response_content
+
+    except APIError as e:
+        logger.error(f"OpenAI API Error: {e}")
+        raise
+    except Exception as e:
+        logger.error(f"Unknown error when getting response from OpenRouter: {e}")
+        raise
+
+# --- Function to check API availability ---
+async def check_api_availability():
+    logger.info("Checking OpenRouter API availability (checking default model key)...")
+    
+    # Check the default model's key as a proxy for availability
+    model = DEFAULT_MODEL
+    model_config = MODEL_CONFIGS.get(model)
+    
+    if not model_config or not model_config.get("api_key"):
+        logger.error(f"Default model {model} configuration or API key is missing.")
         return False
-    except httpx.RequestError as e:
-        logger.error(f"Network error when checking VoidAI API: {e}")
+        
+    try:
+        client = OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=model_config.get("api_key"),
+        )
+        # Simple test request to verify key and connection
+        client.models.list()
+        logger.info(f"OpenRouter API verification successful using key for {model}.")
+        return True
+    except APIError as e:
+        logger.error(f"OpenRouter API check failed: {e}")
         return False
     except Exception as e:
-        logger.error(f"Unknown error when checking VoidAI API: {e}")
+        logger.error(f"Unknown error when checking OpenRouter API: {e}")
         return False

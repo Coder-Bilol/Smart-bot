@@ -1,0 +1,6 @@
+{
+    "status": "string",
+    "category": "string",
+    "reason": "string",
+    "action_required": "boolean"
+}

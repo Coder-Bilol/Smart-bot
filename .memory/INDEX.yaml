@@ -1,0 +1,14 @@
+# Memory Bank Index
+
+artifacts:
+  mission: .memory/MISSION.md
+  context: .memory/CONTEXT.md
+  tasks: .memory/TASKS.md
+  asks: .memory/ASKS.md
+  decisions: .memory/DECISIONS.md
+  usecases: .memory/USECASES.md
+  plan: .memory/PLAN.md
+  contracts: spec/contracts/VERSION.json
+  rules: AGENTS.md
+
+last_updated: 2026-01-09

@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "api_type": "Telegram Bot API",
+  "contracts": {
+    "openrouter": "v1/chat/completions"
+  }
+}
